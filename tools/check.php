@@ -1,5 +1,7 @@
 <?php
 
+require(dirname(__FILE__).'/../config.php');
+
 $list = array(
 	array('name' => 'ReflectionClass', 'type' => 'class', 'desc' => '反射类不存在'),
 	array('name' => 'Closure', 'type' => 'class', 'desc' => '闭包不存在'),
@@ -29,9 +31,9 @@ foreach($list as $one){
 }
 
 if($err == 0){
-	echo "检查完毕，环境符合\r\n";
+	echo "检查完毕，环境符合(ver: ".VERSION.")\r\n";
 }else{
-	echo "检查完毕，环境存在{$err}个问题，请检查\r\n";
+	echo "检查完毕，环境存在{$err}个问题，请检查(ver: ".VERSION.")\r\n";
 }
 
 ?>

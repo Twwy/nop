@@ -23,7 +23,8 @@ define('DBUSER', 'root');
 define('DBPASS', '');
 define('DBPORT', '3306');
 
-
+//版本
+define('VERSION', '1.0.0');
 
 
 
