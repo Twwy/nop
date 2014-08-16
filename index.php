@@ -72,7 +72,7 @@ function db(){
 require('routers.php');
 
 //匹配路由
-foreach ($routers as $key => $value) if(preg_match('/^'.$key.'$/', $uri, $matches)) exit($value($matches));
+foreach ($routers as $key => $value) if(preg_match("/{$key}/", $uri, $matches)) exit($value($matches));
 
 //如果没有匹配就返回404
 exit($routers[PAGE_NOTFOUND]());
